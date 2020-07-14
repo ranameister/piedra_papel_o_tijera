@@ -14,11 +14,15 @@ body{
     align-items: center;
 }
 .header{
- background-color: blueviolet;   
+ background-color: blueviolet;
+ display: flex;
+ justify-content: space-between;
+ padding: 20px 0;
 }
 .title{
     color: white;
     margin: 0 0 0 15px;
+    display: inline;
 }
 .half-display{
     display: grid;
@@ -41,4 +45,37 @@ body{
 .score-label{
     margin: 0;
     padding: 1em 0; 
+}
+.score-container{
+    grid-template: 100px / 33% 33%;
+    gap: 0;
+    justify-content: center;
+}
+.button{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 3px;
+    color: blueviolet;
+    margin-right: 15px ;
+    text-transform: uppercase;   
+}
+.button:hover{
+    background-color: blueviolet;
+    border: white;
+    color: white;
+}
+#reset{
+    padding: 5px 10px;
+    background-color: blueviolet;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    margin-right: 15px ;
+    text-transform: uppercase;   
+}
+#reset:hover{
+    background-color: white;
+    border: blueviolet;
+    color: blueviolet;
 }

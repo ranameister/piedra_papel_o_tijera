@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra Papel o Tijeras</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="game.js"></script>
+    <script src="game.js" async></script>
 </head>
 <body>
     <header class="header container">
         <h1 class="title">Piedra, Papel o Tijeras</h1>
+        <button id="reset">Reiniciar juego</button>
     </header>
     <div class="container half-display">
         <div class="wrapper">
@@ -44,7 +45,7 @@
     <div class="container wrapper">
         <h3 class="score-label">Score</h3>
     </div>
-    <div class="container half-display">
+    <div class="container half-display score-container">
         <div class="wrapper">
             <h4 id="user-score">0</h4>
         </div>
