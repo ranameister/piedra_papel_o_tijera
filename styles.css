@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: darkcyan;
+}
+.container{
+    background-color: white;
+    margin: auto;
+    max-width: 1200px;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+ background-color: blueviolet;   
+}
+.title{
+    color: white;
+    margin: 0 0 0 15px;
+}
+.half-display{
+    display: grid;
+    gap: 10%;
+    grid-template-columns: 45% 45%;
+}
+.user-selector{
+    position: relative;
+}
+.selector{
+    position: absolute;
+    bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.selection{
+    display: grid;
+    grid-template: 500px / 1fr 1fr 1fr;
+}
+.score-label{
+    margin: 0;
+    padding: 1em 0; 
+}
