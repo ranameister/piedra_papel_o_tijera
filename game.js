@@ -5,15 +5,18 @@ var userWinsMsj = "¡Has Ganado!";
 var tieMsj = "Empate"
 var userScore = document.getElementById('user-score');
 var cpuScore = document.getElementById('CPU-score');
+var winner = document.getElementById('winner');
+var userSelectionImg = document.getElementById('user-selection');
+var cpuSelectionImg = document.getElementById('CPU-selection');
 
 const btnRock = document.getElementById('rock');
 const btnPaper = document.getElementById('paper');
 const btnScissors = document.getElementById('scissors');
 const btnReset = document.getElementById('reset');
 
-var rock={id:1, name:"Piedra"};
-var paper={id:2,name:"Papel"};
-var scissors={id:3, name:"Tijeras"};
+var rock={id:1, name:"Piedra", imgPath:"resources\\rock.png"};
+var paper={id:2, name:"Papel", imgPath:"resources\\paper.png"};
+var scissors={id:3, name:"Tijeras", imgPath:"resources\\scissors.png"};
 
 function compare(){
     if(userElection===cpuElection){
@@ -29,15 +32,15 @@ function compare(){
     }
 }
 function userWins(){
-    document.getElementById('winner').innerHTML = userWinsMsj;
+    winner.innerHTML = userWinsMsj;
     userScore.innerHTML++;
 }
 function cpuWins(){
-    document.getElementById('winner').innerHTML = cpuWinsMsj;
+    winner.innerHTML = cpuWinsMsj;
     cpuScore.innerHTML++;
 }
 function tie(){
-    document.getElementById('winner').innerHTML = tieMsj;
+    winner.innerHTML = tieMsj;
 }
 function getRockPaperOrScissor(number){
     if(number===1){
@@ -55,12 +58,11 @@ function getRandomBetween(min, max){
 function initGame(object){
     userElection = object.id;
     console.log("user choice: "+ getRockPaperOrScissor(userElection).name);
+    userSelectionImg.src = object.imgPath;
 
     cpuElection = getRandomBetween(rock.id, scissors.id);
     console.log("cpu choice: "+ getRockPaperOrScissor(cpuElection).name);
-    
-    document.getElementById('CPU-selection').innerHTML = getRockPaperOrScissor(cpuElection).name;
-    document.getElementById('user-selection').innerHTML = object.name;
+    cpuSelectionImg.src = getRockPaperOrScissor(cpuElection).imgPath;
 
     console.log(compare());
     if(compare()===userWinsMsj){
@@ -72,8 +74,9 @@ function initGame(object){
     }
 }
 function resetGame(){
-    document.getElementById('CPU-selection').innerHTML = "Selección usuario";
-    document.getElementById('user-selection').innerHTML = "Selección CPU"
+    userSelectionImg.src = "";
+    cpuSelectionImg.src = "";
+    winner.innerHTML="Resultado";
     userScore.innerHTML=0;
     cpuScore.innerHTML=0;
 }

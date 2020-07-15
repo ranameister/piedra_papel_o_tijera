@@ -47,9 +47,18 @@ body{
     padding: 1em 0; 
 }
 .score-container{
-    grid-template: 100px / 33% 33%;
+    margin: auto;
+    display: grid;
+    width: 50%;
+    grid-template: 100px / 50% 50%;
     gap: 0;
     justify-content: center;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.score{
+    padding-bottom: 30px;
 }
 .button{
     padding: 5px 10px;
@@ -78,4 +87,11 @@ body{
     background-color: white;
     border: blueviolet;
     color: blueviolet;
+}
+#user-container{
+    background-color: blueviolet;
+    color: white;
+}
+.wrapper h4{
+    font-size: 3em;
 }
