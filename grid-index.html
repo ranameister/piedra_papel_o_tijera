@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel o Tijeras</title>
+    <link rel="stylesheet" href="grid-styles.css">
+    <script src="game.js" async></script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <div class="header">
+                <h1 class="title header-content">Piedra, Papel o Tijeras</h1>
+                <button id="reset" class="header-content">Reiniciar juego</button>
+            </div>
+        </header>
+        <div class="sub-grid item">
+            <div class="wrapper user">
+                <h2>Tú</h2>
+            </div>
+            <div class="wrapper cpu">
+                <h2>CPU</h2>
+            </div>
+            <div class="wrapper user-selector">
+                <img id="user-selection" src=""/>
+            </div>
+            <div class="selector">
+                <div class="wrapper">
+                    <button class="button" id="rock">Piedra</button>
+                </div>
+                <div class="wrapper">
+                    <button class="button" id="paper">Papel</button>
+                </div>
+                <div class="wrapper">
+                    <button class="button" id="scissors">Tijeras</button>
+                </div>
+            </div>
+            <div class="wrapper">
+                <h2 id="winner">Resultado</h2>
+            </div>
+            <div class="wrapper">
+                <img id="CPU-selection" src=""/>
+            </div>
+        </div>
+        <div class="score item">
+            <div class="wrapper score-label">
+                <h3>Score</h3>
+            </div>
+            <div id = "user-container" class="wrapper">
+                <h4 id="user-score">0</h4>
+            </div>
+            <div id="cpu-container" class="wrapper">
+                <h4 id="CPU-score">0</h4>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
